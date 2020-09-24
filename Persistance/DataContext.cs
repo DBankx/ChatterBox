@@ -11,6 +11,7 @@ namespace Persistance
         }
         
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

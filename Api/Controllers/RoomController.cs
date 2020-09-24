@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ApplicationLogic.Room;
 using Domain;
@@ -19,15 +20,21 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public async Task<Unit> CreateRoom(Create.Command command)
+        public async Task<ActionResult<Unit>> CreateRoom(Create.Command command)
         {
             return await _mediator.Send(command);
         }
 
         [HttpGet]
-        public async Task<List<Room>> GetRooms()
+        public async Task<ActionResult<List<Room>>> GetRooms()
         {
             return await _mediator.Send(new List.Query());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Room>> GetRoom(Guid id)
+        {
+            return await _mediator.Send(new Get.Query {Id = id});
         }
     }
 }

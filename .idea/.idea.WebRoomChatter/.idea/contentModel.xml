@@ -30,11 +30,19 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="SignalR" t="Include">
+          <e p="ChatHub.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
       </e>
       <e p="ApplicationLogic" t="IncludeRecursive">
         <e p="ApplicationLogic.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Message" t="Include">
+          <e p="Create.cs" t="Include" />
+          <e p="MappingProfile.cs" t="Include" />
+          <e p="MessageDto.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -44,12 +52,14 @@
         </e>
         <e p="Room" t="Include">
           <e p="Create.cs" t="Include" />
+          <e p="Get.cs" t="Include" />
           <e p="List.cs" t="Include" />
         </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="Message.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -68,6 +78,8 @@
           <e p="20200924202411_initialMigration.Designer.cs" t="Include" />
           <e p="20200924211452_ChangedDateMigration.cs" t="Include" />
           <e p="20200924211452_ChangedDateMigration.Designer.cs" t="Include" />
+          <e p="20200924215709_UserMigration.cs" t="Include" />
+          <e p="20200924215709_UserMigration.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
