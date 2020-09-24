@@ -23,12 +23,13 @@
         <option value="$PROJECT_DIR$/ApplicationLogic/Class1.cs" />
         <option value="$PROJECT_DIR$/Domain/User.cs" />
         <option value="$PROJECT_DIR$/Persistance/DataContext.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/RoomController.cs" />
         <option value="$PROJECT_DIR$/Api/Program.cs" />
         <option value="$PROJECT_DIR$/ApplicationLogic/Room/Create.cs" />
         <option value="$PROJECT_DIR$/Domain/Room.cs" />
         <option value="$PROJECT_DIR$/Api/Startup.cs" />
         <option value="$PROJECT_DIR$/ApplicationLogic/Room/List.cs" />
+        <option value="$PROJECT_DIR$/Api/Controllers/RoomController.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -85,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600974052753</updated>
-      <workItem from="1600974061664" duration="6085000" />
+      <workItem from="1600974061664" duration="6832000" />
     </task>
     <servers />
   </component>
