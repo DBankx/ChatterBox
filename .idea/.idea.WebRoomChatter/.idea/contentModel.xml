@@ -6,6 +6,7 @@
     <e p="C:\Users\Asus\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\Asus\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="C:\Users\Asus\Desktop\c#\WebRoomChatter" t="IncludeFlat">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="Api" t="IncludeRecursive">
         <e p="Api.csproj" t="IncludeRecursive" />
         <e p="appsettings.Development.json" t="Include" />

@@ -1,4 +1,6 @@
+using Api.SignalR;
 using ApplicationLogic.Room;
+using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +33,7 @@ namespace Api
             // adding mediatr
             services.AddMediatR(typeof(Create.Handler).Assembly);
             services.AddSignalR();
+            services.AddAutoMapper(typeof(List.Handler).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
