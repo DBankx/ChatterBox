@@ -47,6 +47,7 @@
       <e p="node_modules\ansi-regex" t="IncludeRecursive" />
       <e p="node_modules\antd" t="IncludeRecursive" />
       <e p="node_modules\async-validator" t="IncludeRecursive" />
+      <e p="node_modules\axios" t="IncludeRecursive" />
       <e p="node_modules\camelcase" t="IncludeRecursive" />
       <e p="node_modules\chalk" t="IncludeRecursive" />
       <e p="node_modules\clean-stack" t="IncludeRecursive" />

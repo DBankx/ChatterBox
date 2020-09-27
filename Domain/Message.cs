@@ -8,6 +8,6 @@ namespace Domain
         public string Body { get; set; }
         public DateTime CreatedAt { get; set; }
         public string Username { get; set; }
-        public Room Room { get; set; }
+        public virtual Room Room { get; set; }
     }
 }

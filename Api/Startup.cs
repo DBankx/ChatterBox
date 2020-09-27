@@ -30,6 +30,14 @@ namespace Api
                 options.UseLazyLoadingProxies();
                 options.UseMySql(Configuration.GetConnectionString("RoomDb"));
             });
+            //adding cors
+            services.AddCors(opt =>
+            {
+                opt.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+                });
+            });
             // adding mediatr
             services.AddMediatR(typeof(Create.Handler).Assembly);
             services.AddSignalR();
@@ -47,6 +55,8 @@ namespace Api
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

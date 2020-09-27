@@ -45,7 +45,7 @@ namespace ApplicationLogic.Message
                     Username = request.Username
                 };
                 
-                room.Messages.Add(newMessage);
+               // room.Messages.Add(newMessage);
                 
                 var success = await _context.SaveChangesAsync() > 0;
 

@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import {Button, Space} from "antd";
 import {SearchOutlined} from "@ant-design/icons";
+import {history} from "../index";
 
 const Navbar = () => {
     return (
@@ -12,7 +13,7 @@ const Navbar = () => {
                     <h1>ChatterBox</h1>
                 </div>
                     <Space>
-                    <Button shape={"round"} type={"primary"}>Create a room</Button>
+                    <Button shape={"round"} type={"primary"} onClick={() => history.push("/rooms")}>Create a room</Button>
                     <Button shape={"round"} icon={<SearchOutlined />}>Find a room</Button>
                     </Space>
             </div>

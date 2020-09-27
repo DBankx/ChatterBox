@@ -26,13 +26,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f56ffabf-4cbc-40ed-a905-3ac550fdd77a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/dataSources/410f2aff-bacd-4075-94a4-f3a75c3be540.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/dataSources/77f7cbc4-baa8-442a-a459-d164f4dc1fa5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/dataSources/fee392e1-4201-4989-9291-8458d91cb12e.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/api/agent.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/home/Spinner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/models/room.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/room/Room.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/room/RoomFindInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/room/Rooms.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/stores/roomStore.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/stores/rootStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebRoomChatter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicationLogic/Message/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationLogic/Message/Create.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Message.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/.idea.client.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/.idea.client.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/.idea.client.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/.idea.client.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/nav/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/nav/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,20 +76,20 @@
         <option value="$PROJECT_DIR$/ApplicationLogic/User/ReturnUser.cs" />
         <option value="$PROJECT_DIR$/ApplicationLogic/User/Login.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/UserController.cs" />
-        <option value="$PROJECT_DIR$/Domain/Message.cs" />
         <option value="$PROJECT_DIR$/Persistance/DataContext.cs" />
-        <option value="$PROJECT_DIR$/Domain/Room.cs" />
         <option value="$PROJECT_DIR$/ApplicationLogic/Message/MappingProfile.cs" />
         <option value="$PROJECT_DIR$/ApplicationLogic/Message/MessageDto.cs" />
-        <option value="$PROJECT_DIR$/ApplicationLogic/Message/Create.cs" />
         <option value="$PROJECT_DIR$/Api/SignalR/ChatHub.cs" />
         <option value="$PROJECT_DIR$/client/tsconfig.json" />
         <option value="$PROJECT_DIR$/client/src/App.css" />
         <option value="$PROJECT_DIR$/client/src/logo.svg" />
-        <option value="$PROJECT_DIR$/Api/Startup.cs" />
         <option value="$PROJECT_DIR$/client/src/App.tsx" />
         <option value="$PROJECT_DIR$/client/src/index.tsx" />
         <option value="$PROJECT_DIR$/client/src/home/HomePage.tsx" />
+        <option value="$PROJECT_DIR$/Api/Startup.cs" />
+        <option value="$PROJECT_DIR$/Domain/Room.cs" />
+        <option value="$PROJECT_DIR$/Domain/Message.cs" />
+        <option value="$PROJECT_DIR$/ApplicationLogic/Message/Create.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +100,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1hyCfOddDHfsz8D2UjknndxufNc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -145,6 +160,7 @@
       <updated>1600974052753</updated>
       <workItem from="1600974061664" duration="13615000" />
       <workItem from="1601196985323" duration="668000" />
+      <workItem from="1601229320672" duration="3735000" />
     </task>
     <servers />
   </component>
@@ -163,6 +179,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
