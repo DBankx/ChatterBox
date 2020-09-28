@@ -14,6 +14,7 @@ namespace ApplicationLogic.Room
             public Guid Id { get; set; }
             public string About { get; set; }
             public string Title { get; set; }
+            public string Username { get; set; }
         }
 
         public class Handler : IRequestHandler<Command>
@@ -32,7 +33,8 @@ namespace ApplicationLogic.Room
                     Title = request.Title,
                     Id = request.Id,
                     CreatedAt = DateTime.Now,
-                    About = request.About
+                    About = request.About,
+                    Username = request.Username
                 };
 
                 _context.Rooms.Add(newRoom);

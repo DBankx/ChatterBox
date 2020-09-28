@@ -1,25 +1,32 @@
-﻿import React from "react";
+﻿import React, {useContext} from "react";
 import {Button, Space} from "antd";
 import {SearchOutlined} from "@ant-design/icons";
 import {history} from "../index";
+import CreateRoomModal from "../room/CreateRoomModal";
+import rootStoreContext from "../stores/rootStore";
+import { Link } from "react-router-dom";
+
+
 
 const Navbar = () => {
+    const {showModal} = useContext(rootStoreContext).commonStore;
     return (
         <div className={"container"}>
-        <div className={"nav"}>
             <div className={"navbar"}>
-                <div className={"nav-logo"}>
-                    <img alt={"logo"} src={"/assets/logo.svg"} className={"navbar-logo"} />
-                    <h1>ChatterBox</h1>
-                </div>
-                    <Space>
-                    <Button shape={"round"} type={"primary"} onClick={() => history.push("/rooms")}>Create a room</Button>
-                    <Button shape={"round"} icon={<SearchOutlined />}>Find a room</Button>
-                    </Space>
+                <Space>
+                    <img alt={"logo"} src={"/assets/logo.svg"} className={"navbar-logo"}/>
+                    <Link to={"/"}><h1>ChatterBox</h1></Link>
+                </Space>
+                <Space>
+                    <Button shape={"round"} type={"primary"} onClick={() => showModal()}>Create a
+                        room</Button>
+                    <CreateRoomModal />
+                  
+                    <Button shape={"round"} icon={<SearchOutlined/>} onClick={() => history.push("/rooms")}>Find a room</Button>
+                </Space>
             </div>
         </div>
-        </div>
-    )    
+    )
 }
 
 export default Navbar;

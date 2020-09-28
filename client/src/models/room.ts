@@ -3,4 +3,5 @@
     about: string;
     title: string;
     createdAt: string;
+    username: string | null;
 }

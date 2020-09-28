@@ -11,6 +11,7 @@ export class RoomStore{
     
     @observable rooms: Map<string, IRoom> = new Map();
     @observable loadingInitial: boolean = false;
+    @observable room: IRoom | null = null;
     
     @computed get GetRoomsArray(){
         return Array.from(this.rooms.values());
@@ -32,6 +33,17 @@ export class RoomStore{
                 this.loadingInitial = false;
             })
             console.log(error)
+        }
+    }
+    
+    @action CreateRoom = async(room: IRoom) => {
+        try{
+            await RoomRequests.createRoom(room);
+            runInAction(() => {
+                this.rooms.set(room.id, room);
+            })
+        } catch(error){
+            console.log(error);
         }
     }
     

@@ -11,7 +11,7 @@ const App = () => {
         <Layout.Header style={{backgroundColor: "#fff"}}>
             <Navbar />
         </Layout.Header>
-          <Layout.Content style={{backgroundColor: "#fff"}}>
+          <Layout.Content style={{paddingTop: "2em", backgroundColor: "#fff"}}>
               <div className={"container"}>
               <Route exact path={"/"} component={HomePage} />
               <Route exact path={"/rooms"} component={Room} />

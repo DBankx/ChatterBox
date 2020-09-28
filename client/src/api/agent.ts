@@ -13,5 +13,6 @@ const Request = {
 
 export const RoomRequests = {
     getAllRooms : () : Promise<IRoom[]> => Request.get("/room"),
-    getOneRoom: (id: string) : Promise<IRoom> => Request.get(`/room/${id}`)
+    getOneRoom: (id: string) : Promise<IRoom> => Request.get(`/room/${id}`),
+    createRoom: (roomValues: IRoom): Promise<{}> => Request.post("/room", roomValues)
 }
