@@ -26,13 +26,13 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Room>>> GetRooms()
+        public async Task<ActionResult<List<RoomDto>>> GetRooms()
         {
             return await _mediator.Send(new List.Query());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Room>> GetRoom(Guid id)
+        public async Task<ActionResult<RoomDto>> GetRoom(Guid id)
         {
             return await _mediator.Send(new Get.Query {Id = id});
         }

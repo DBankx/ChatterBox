@@ -35,7 +35,7 @@ namespace Api
             {
                 opt.AddDefaultPolicy(builder =>
                 {
-                    builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+                    builder.AllowAnyHeader().WithOrigins("http://localhost:3000").AllowAnyMethod().AllowCredentials();
                 });
             });
             // adding mediatr

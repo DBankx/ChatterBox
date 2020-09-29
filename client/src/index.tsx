@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import 'antd/dist/antd.css';
 import {Router} from "react-router-dom";
 import {createBrowserHistory} from "history";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const history = createBrowserHistory();
 

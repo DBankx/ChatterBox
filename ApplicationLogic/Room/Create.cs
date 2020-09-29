@@ -45,5 +45,7 @@ namespace ApplicationLogic.Room
                 throw new Exception("Problem saving room");
             }
         }
+        
+        
     }
 }

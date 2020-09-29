@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistance;
@@ -9,22 +10,24 @@ namespace ApplicationLogic.Room
 {
     public class Get
     {
-        public class Query : IRequest<Domain.Room>
+        public class Query : IRequest<RoomDto>
         {
             public Guid Id { get; set; }
         }
 
 
-        public class Handler : IRequestHandler<Query, Domain.Room>
+        public class Handler : IRequestHandler<Query, RoomDto>
         {
             private readonly DataContext _context;
+            private readonly IMapper _mapper;
 
-            public Handler(DataContext context)
+            public Handler(DataContext context, IMapper mapper)
             {
                 _context = context;
+                _mapper = mapper;
             }
 
-            public async Task<Domain.Room> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<RoomDto> Handle(Query request, CancellationToken cancellationToken)
             {
                 Domain.Room room = await _context.Rooms.SingleOrDefaultAsync(x => x.Id == request.Id);
 
@@ -33,7 +36,7 @@ namespace ApplicationLogic.Room
                     throw new Exception("Room not found");
                 }
 
-                return room;
+                return _mapper.Map<RoomDto>(room);
             }
         }
     }

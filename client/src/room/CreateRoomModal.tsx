@@ -15,19 +15,23 @@ const validationSchema = Yup.object().shape({
 
 const CreateRoomModal = () => {
     const {visible, cancelModal} = useContext(rootStoreContext).commonStore;
-    const {CreateRoom} = useContext(rootStoreContext).roomStore;
+    const {CreateRoom, username, createUsername} = useContext(rootStoreContext).roomStore;
     return (
         <Modal visible={visible} title={"Create a room"} footer={null} onCancel={() => cancelModal()}>
-            <Formik initialValues={{id: uuid() ,username: "", about: "", title: "", createdAt: Date.now()}} validationSchema={validationSchema}
-                    onSubmit={(values: any) => CreateRoom(values).then(() => cancelModal())}>
+            <Formik initialValues={{id: uuid() ,username: username === null && localStorage.getItem("username") === null ? "" : username || localStorage.getItem("username") , about: "", title: "", createdAt: Date.now()}} validationSchema={validationSchema}
+                    onSubmit={(values: any) => {
+                        CreateRoom(values).then(() => cancelModal());
+                        if(localStorage.getItem("token") === null) createUsername(values.username);
+                    }}>
                 {({values, errors, isSubmitting, handleSubmit, handleBlur, touched, handleChange, isValid, dirty, handleReset, setSubmitting}) => (
                     <Form onFinish={handleSubmit}>
-                        <Form.Item hasFeedback name={"username"}
-                                   validateStatus={touched.username && errors.username ? "error" : undefined}
-                                   help={touched.username && errors.username && errors.username}>
-                            <Input name={"username"} onChange={handleChange} value={values.username}
+                        {username === null && localStorage.getItem("username") === null ? (<Form.Item hasFeedback name={"username"}
+                                                                                                      validateStatus={touched.username && errors.username ? "error" : undefined}
+                                                                                                      help={touched.username && errors.username && errors.username}>
+                            <Input name={"username"} onChange={handleChange} value={values.username!}
                                    placeholder={"Unique username for the room"} onBlur={handleBlur}/>
-                        </Form.Item>
+                        </Form.Item>) : null}
+                        
                         <Form.Item hasFeedback name={"title"} validateStatus={touched.title && errors.title ? "error" : undefined} help={touched.title && errors.title && errors.title}>
                             <Input name={"title"} placeholder={"Title of your room"} value={values.title} onChange={handleChange} onBlur={handleBlur} />
                         </Form.Item>

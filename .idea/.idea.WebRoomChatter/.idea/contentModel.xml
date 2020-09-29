@@ -60,6 +60,8 @@
           <e p="Create.cs" t="Include" />
           <e p="Get.cs" t="Include" />
           <e p="List.cs" t="Include" />
+          <e p="MappingProfile.cs" t="Include" />
+          <e p="RoomDto.cs" t="Include" />
         </e>
       </e>
       <e p="client\node_modules\@ant-design\colors" t="IncludeRecursive" />
@@ -75,6 +77,7 @@
       <e p="client\node_modules\@jest\test-result" t="IncludeRecursive" />
       <e p="client\node_modules\@jest\transform" t="IncludeRecursive" />
       <e p="client\node_modules\@jest\types" t="IncludeRecursive" />
+      <e p="client\node_modules\@microsoft\SignalR" t="IncludeRecursive" />
       <e p="client\node_modules\@testing-library\jest-dom" t="IncludeRecursive" />
       <e p="client\node_modules\@testing-library\react" t="IncludeRecursive" />
       <e p="client\node_modules\@testing-library\user-event" t="IncludeRecursive" />
@@ -147,6 +150,7 @@
       <e p="client\node_modules\open" t="IncludeRecursive" />
       <e p="client\node_modules\p-map" t="IncludeRecursive" />
       <e p="client\node_modules\pirates" t="IncludeRecursive" />
+      <e p="client\node_modules\postcss" t="IncludeRecursive" />
       <e p="client\node_modules\pretty-format" t="IncludeRecursive" />
       <e p="client\node_modules\rc-align" t="IncludeRecursive" />
       <e p="client\node_modules\rc-cascader" t="IncludeRecursive" />
@@ -184,6 +188,7 @@
       <e p="client\node_modules\react-fast-compare" t="IncludeRecursive" />
       <e p="client\node_modules\react-router-dom" t="IncludeRecursive" />
       <e p="client\node_modules\react-scripts" t="IncludeRecursive" />
+      <e p="client\node_modules\react-toastify" t="IncludeRecursive" />
       <e p="client\node_modules\resize-observer-polyfill" t="IncludeRecursive" />
       <e p="client\node_modules\scroll-into-view-if-needed" t="IncludeRecursive" />
       <e p="client\node_modules\strip-ansi" t="IncludeRecursive" />
